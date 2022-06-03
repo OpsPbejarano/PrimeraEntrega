@@ -3,6 +3,8 @@ Pasos para probar la app.
 una vez este arriba el server ir a la dirrecion:
 127.0.0.1:8000/index
 
+"Prueba commit"
+
 alli se encontraran 4 botones:
 
 1. Ingresar Producto: lleva al formulario en el cual se insertan productos a la base de datos, requiere ingresar nombre del producto, seccion y precio 
