@@ -1,0 +1,26 @@
+{% extends 'GestionPedidos/index.html' %}
+
+{% block title %}  Buscar Productos  {% endblock %}
+
+{% block content %}
+<h3> Estamos buscando el {{ busqueda }}</h3>
+
+{% if productos %}
+
+<ul>
+{% for producto in productos %}
+    <li> {{ producto.nombre }} {{ producto.precio }} </li>
+
+{% endfor %}
+</ul>
+
+{% endif %}
+<form action="/busquedaproducto/" method="GET"> 
+    <input type="submit" class="color4"  value="Buscar otro Producto">
+</form>
+
+<form action="/index/" method="GET"> 
+    <input type="submit" class="color4"  value="Volver al inicio">
+</form>
+{% endblock %}
+

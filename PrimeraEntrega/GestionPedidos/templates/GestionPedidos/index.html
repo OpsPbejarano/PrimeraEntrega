@@ -1,0 +1,41 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}  index  {% endblock %} </title>
+    <link type='text/css' rel="stylesheet" href="{% static 'css/styles.css'%}">
+</head>
+<body>
+    <H1> Primer entregable </H1>
+
+    {% block content %}
+
+    <form action="/ingresarproducto/" method="GET"> 
+        <input type="submit" class="color1"  value="Ingresar Producto">
+    </form>
+
+    <form action="/ingresarcliente/" method="GET"> 
+        <input type="submit" class="color2"  value="Ingresar Cliente">
+    </form>
+
+    <form action="/hacerpedido/" method="GET"> 
+        <input type="submit" class="color3"  value="Hacer Pedido">
+    </form>
+
+    <form action="/busquedaproducto/" method="GET"> 
+        <input type="submit" class="color4"  value="Buscar Producto">
+    </form>
+    {% endblock %}
+
+
+
+    <footer>
+        <h2> ENTREGADO POR</h2>
+        <p> Pablo Andres Bejarano Garcia</p>
+    </footer>
+</body>
+</html>

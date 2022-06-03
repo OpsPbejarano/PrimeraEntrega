@@ -1,0 +1,23 @@
+{% extends 'GestionPedidos/index.html' %}
+
+{% block title %}  Ingresar Cliente  {% endblock %}
+
+{% block content %}
+<h3> Ingrese un nuevo cliente </h3>
+{% if formularioCliente.errors %}
+<p style="color: red;">Estan mal los datos, revisar</p>
+{% endif %}
+
+<form action="" method="POST">{% csrf_token %}
+    
+    <table>
+
+        {{ formularioCliente.as_table }}
+
+    </table>
+
+    <input type="submit", value="guardar">
+</form>
+
+
+{% endblock %}

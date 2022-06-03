@@ -1,0 +1,23 @@
+{% extends 'GestionPedidos/index.html' %}
+
+{% block title %}  Ingresar Productos  {% endblock %}
+
+{% block content %}
+<h3> Ingrese un nuevo producto </h3>
+{% if formularioProdcuto.errors %}
+<p style="color: red;">Estan mal los datos, revisar</p>
+{% endif %}
+
+<form action="" method="POST">{% csrf_token %}
+    
+    <table>
+
+        {{ formularioProdcuto.as_table }}
+
+    </table>
+
+    <input type="submit", value="guardar">
+</form>
+
+
+{% endblock %}

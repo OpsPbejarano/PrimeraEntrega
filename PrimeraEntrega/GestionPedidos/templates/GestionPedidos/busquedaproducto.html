@@ -1,0 +1,16 @@
+{% extends 'GestionPedidos/index.html' %}
+
+{% block title %}  Buscar Productos  {% endblock %}
+
+{% block content %}
+<h3> Digite el producto a buscar </h3>
+
+<form action="/buscar/" method="GET">
+    <input type="text" name="producto">
+    <input type="submit" value="buscar">
+</form>
+<form action="/index/" method="GET"> 
+    <input type="submit" class="color4"  value="Volver al inicio">
+</form>
+
+{% endblock %}
